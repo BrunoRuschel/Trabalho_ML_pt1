@@ -1,0 +1,57 @@
+Fitting 5 folds for each of 28 candidates, totalling 140 fits
+Melhor F1 na validação: 0.7737783817299011
+Melhores parâmetros: {'model__C': 1, 'model__class_weight': None, 'model__solver': 'lbfgs'}
+F1 no conjunto de teste: 0.7894201424211598
+              precision    recall  f1-score   support
+
+           0       0.59      0.73      0.66       270
+           1       0.84      0.74      0.79       523
+
+    accuracy                           0.74       793
+   macro avg       0.72      0.74      0.72       793
+weighted avg       0.76      0.74      0.74       793
+
+
+===============================
+Tuning do modelo: MLP
+===============================
+
+Fitting 5 folds for each of 252 candidates, totalling 1260 fits
+Melhor F1 na validação: 0.7957130393323781
+Melhores parâmetros: {'model__activation': 'relu', 'model__alpha': 0.0001, 'model__hidden_layer_sizes': (200,), 'model__learning_rate_init': 0.0005}
+F1 no conjunto de teste: 0.8183556405353728
+              precision    recall  f1-score   support
+
+           0       0.65      0.65      0.65       270
+           1       0.82      0.82      0.82       523
+
+    accuracy                           0.76       793
+   macro avg       0.73      0.73      0.73       793
+weighted avg       0.76      0.76      0.76       793
+
+
+===============================
+Tuning do modelo: Naive Bayes
+===============================
+
+F1 no conjunto de teste: 0.7843137254901961
+              precision    recall  f1-score   support
+
+           0       0.58      0.64      0.61       270
+           1       0.80      0.76      0.78       523
+
+    accuracy                           0.72       793
+   macro avg       0.69      0.70      0.70       793
+weighted avg       0.73      0.72      0.73       793
+
+
+Ranking final:
+                    F1 Validação  F1 Teste  \
+MLP                     0.795713  0.818356   
+Regressão Logística     0.773778   0.78942   
+Naive Bayes                  N/A  0.784314   
+
+                                                            Parâmetros  
+MLP                  {'model__activation': 'relu', 'model__alpha': ...  
+Regressão Logística  {'model__C': 1, 'model__class_weight': None, '...  
+Naive Bayes                                                        N/A 
